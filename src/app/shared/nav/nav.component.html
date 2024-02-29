@@ -1,0 +1,20 @@
+<nav>
+    <div class="wrapper">
+        <div class="logo"><a href="#">Logo</a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+            <li><a href="inicio">Home</a></li>
+
+            @if(!userLoginOn){
+            <li><a href="login">Iniciar sesion</a></li>
+            <li><a href="#">Registrar</a></li>
+            }
+            @else{
+            <li><a href="#">Salir</a></li>
+            }
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+</nav>

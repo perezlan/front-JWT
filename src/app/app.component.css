@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: calc(
+    100vh - 50px
+  ); /* Altura mínima de la ventana menos la altura del footer */
+  padding-bottom: 50px; /* Altura del footer */
+  box-sizing: border-box;
+}
+
+app-footer {
+  background-color: #333; /* Color de fondo del footer */
+  color: white; /* Color del texto del footer */
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
