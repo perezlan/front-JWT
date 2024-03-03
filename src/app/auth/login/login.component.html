@@ -1,16 +1,37 @@
 <div class="container">
     <form [formGroup]="loginForm">
+        <p class="text-danger">{{loginError}}</p>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
             <input type="email" class="form-control" formControlName="username" aria-describedby="emailHelp">
 
+            @if(!username.valid && (username.dirty || username.touched)){
+                <div class="text-danger" >
+
+                    @if(username.errors?.['required']){
+                        <div>Username requerido.</div>
+                    }
+                </div>
+            }
         </div>
+
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" class="form-control" formControlName="password">
+
+            @if(!password.valid && (password.dirty || password.touched)){
+                <div class="text-danger" >
+
+                    @if(password.errors?.['required']){
+                        <div>password requerido.</div>
+                    }
+                </div>
+            }
+            
+
         </div>
 
-        <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+        <button type="submit" class="btn btn-primary" (click)="login()">Iniciar sesion</button>
     </form>
 
 </div>

@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +20,7 @@ import { AuthModule } from './auth/auth.module';
     PagesModule,
     SharedModule,
     AuthModule,
+    HttpClientModule
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
